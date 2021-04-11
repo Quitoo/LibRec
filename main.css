@@ -1,0 +1,314 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #6c7279;
+    background-color: #ea9b9b;
+    -webkit-font-smoothing: antialiased;
+
+    margin: 0;
+}
+
+* ,
+*:before,
+*:after{
+    box-sizing: border-box; /*ficsated size from margin*/
+}
+
+h1, h2, h3, h4, h5, h6 { /*V nih est' vstroeniy otstup mi ego ubiraem*/
+    margin: 0;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+
+/* Container
+======================== */
+
+.container {
+    width: 100%;
+    max-width:  1170px;
+    margin: 0 auto;
+}
+
+
+/* Header
+========================*/
+.header {
+    position: fixed; /*Up all*/
+    margin-top: 0;
+
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 62px;
+    background-color: #ea9b9b;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #515369;
+    align-items: center;
+    padding: 10px ;
+}
+
+.nav {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.nav__link {
+    margin-left: 50px;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.75;
+
+    transition: opacity .2s linear;
+    transition: border .2s linear;
+}
+.nav__link:hover {
+    opacity: 1;
+    border-bottom: 1px solid #fff;
+}
+.header__logo {
+    font-size: 35px;
+}
+.sing_in {
+    margin-top: -7px;
+    font-size: 16px;;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #F1E1CC;
+    text-decoration: none;
+    opacity: 0.9;
+
+    transition: opacity .2s linear;
+    transition: background .2s linear;
+ background-color: #6284FB;
+
+    display: block;
+    border: 2px solid #F1E1CC;
+    padding: 6px 26px;
+    border-radius: 30px;
+    font-size: 18px;
+}
+.sing_in:hover {
+    background-color: #2199c6;
+    opacity: 1;
+}
+
+/* Recipe List
+========================*/
+.recipes {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 15px;
+}
+.recipe_list {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 500px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.12);
+    background-color: rgb(234, 182, 155);
+    border-bottom-left-radius: 30px;
+
+    position: relative;
+    overflow: hidden;
+}
+.recipe {
+    padding: 20px;
+}
+
+.recipes_img {
+    width: 4%;
+    padding-top: 15%;
+    padding-right: 10%;
+}
+.img_item {
+    padding-top: 20px;
+}
+.recipe_name {
+    margin: 20px 5px;
+    writing-mode: vertical-rl;
+    justify-content: center;
+}
+
+/* Add Button
+========================*/
+.window__link{
+    width: 50%;
+    padding-left: 60px;
+}
+.topbutton {
+    width: 55px;
+    height: 55px;
+    border:none;
+    background:#6284FB;
+    text-align:center;
+    padding: 0px;
+    position:fixed;
+    bottom:50px;
+    right:120px;
+    cursor:pointer;
+    border-radius: 5px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -khtml-border-radius: 100px;
+}
+.topbutton:hover {background:#829DFF;}
+.button__add{
+    padding: 16px;
+}
+#add_recipe {
+    width:350px;
+    height: 500px;
+    text-align: left;
+    border: none;
+    background-color: rgb(234, 182, 155);
+    justify-content: center;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 0 9999px rgba(0,0,0, 0.3);
+    border-bottom-left-radius: 30px;
+}
+  #add_recipe:target {display: block;}
+  .window__add-h{
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 500;
+    font-size: 15;
+    color: #000;
+    margin-left: 90px;
+    margin-top: 26px;
+  }
+.window__add-name{
+    width: 230px;
+    height: 26px;
+    border-radius: 10px;
+    border: none;
+    background-color: #EEEEEE;
+    margin-left: 59px;
+    margin-top: 10px;
+    padding-left: 12px;
+}
+.window__add-name::placeholder{
+    color: #C1C1C1;
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
+}
+.window__add-text{
+    width: 230px;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    background-color: #EEEEEE;
+    margin-left: 59px;
+    margin-top: 10px;
+    padding-left: 12px;
+    padding-top: 10px;
+    resize: none;
+
+}
+.window__add-text::placeholder{
+    color: #C1C1C1;
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.window__button__container{
+    width: 250px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.window__add-button{
+    border: none;
+    width: 100px;
+    height: 31px;
+    margin-top: 20px;
+    padding: 0;
+    background-color: #6284FB;
+    margin-left: 0px;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 400;
+
+}
+.window__add-button--cancel{
+    border: none;
+    width: 100px;
+    border-radius: 20px;
+    height: 31px;
+    margin-top: 20px;
+    background-color: #C17C7C;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+}
+.window__add-button:hover {background:#829DFF;}
+
+.window__add-button--cancel:hover {background:#C28888;}
+
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#drop__second{
+    margin-left: 98px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    font-size: 14px;
+    font-weight: 400px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #829DFF;}
